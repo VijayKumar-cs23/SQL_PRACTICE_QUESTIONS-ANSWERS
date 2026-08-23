@@ -1,0 +1,99 @@
+SQL PRACTICE QUESTIONS
+
+1.WAQTD the name of all the employees from the EMP table.
+
+SELECT ENAME
+FROM EMP;
+
+2.WAQTD the salary of all the employees from the EMP table.
+
+SELECT SAL
+FROM EMP;
+
+3.WAQTD the department number of all the employees.
+
+SELECT DEPTNO
+FROM EMP;
+
+4.WAQTD the name and salary of the employees from the EMP table.
+
+SELECT ENAME, SAL
+FROM EMP;
+
+5.WAQTD the name, job and department number of all the employees.
+
+SELECT ENAME, JOB, DEPTNO
+FROM EMP;
+
+6.WAQTD the employee number, name, job and salary of all the employees.
+
+SELECT EMPNO, ENAME, JOB, SAL
+FROM EMP;
+
+7.WAQTD the name, salary, commission and department number of all the employees.
+
+SELECT ENAME, SAL, COMM, DEPTNO
+FROM EMP;
+
+8.WAQTD all the details of the employees from the EMP table.
+
+SELECT *
+FROM EMP;
+
+9.WAQTD the name and annual salary of all the employees.
+
+SELECT ENAME, SAL * 12
+FROM EMP;
+
+10.WAQTD the name and salary after adding 500 to the salary of all employees.
+
+SELECT ENAME, SAL + 500
+FROM EMP;
+
+11.WAQTD the name and salary after increasing the salary by 10%.
+
+SELECT ENAME, SAL + (SAL * 10 / 100)
+FROM EMP;
+
+12.WAQTD the name and total annual salary after adding a yearly bonus of 2000.
+
+SELECT ENAME, (SAL * 12) + 2000
+FROM EMP;
+
+13.WAQTD the name and annual salary of all employees with a suitable alias for annual salary.
+
+SELECT ENAME, SAL * 12 AS ANNUAL_SALARY
+FROM EMP;
+
+14.WAQTD the employee number as ID, employee name as NAME and salary as MONTHLY_SALARY.
+
+SELECT EMPNO AS ID,ENAME AS NAME,SAL AS MONTHLY_SALARY
+FROM EMP;
+
+15.WAQTD all the different jobs available in the EMP table.
+
+SELECT DISTINCT JOB
+FROM EMP;
+
+16.WAQTD all the different department numbers from the EMP table.
+
+SELECT DISTINCT DEPTNO
+FROM EMP;
+
+17.WAQTD all the different salaries available in the EMP table.
+
+SELECT DISTINCT SAL
+FROM EMP;
+
+18.WAQTD the employee name, monthly salary and annual salary.
+
+SELECT ENAME, SAL, SAL * 12 AS ANNUAL_SALARY
+FROM EMP;
+
+19.WAQTD the employee name, salary and salary after a 20% increment.
+
+SELECT ENAME,SAL,SAL+(SAL*20/100) AS INCREASED_SALARY
+FROM EMP;
+
+
+
