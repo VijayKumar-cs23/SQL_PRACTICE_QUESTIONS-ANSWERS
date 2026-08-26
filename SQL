@@ -1,4 +1,4 @@
-SQL PRACTICE QUESTIONS
+SQL PRACTICE QUESTIONS :
 
 1.WAQTD the name of all the employees from the EMP table.
 
@@ -94,6 +94,118 @@ FROM EMP;
 
 SELECT ENAME,SAL,SAL+(SAL*20/100) AS INCREASED_SALARY
 FROM EMP;
+
+SELECTION :
+
+20. WAQTD the details of the employees who are working in department 10.
+
+SELECT * FROM EMP
+WHERE DEPTNO = 10;
+
+21. WAQTD the name and job of employees whose job is MANAGER.
+
+SELECT ENAME, JOB FROM EMP
+WHERE JOB = 'MANAGER';
+
+22. WAQTD the name and salary of employees whose salary is greater than 3000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL > 3000;
+
+23. WAQTD the name and salary of employees whose salary is less than 1000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL < 1000;
+
+24. WAQTD the details of employees whose salary is greater than or equal to 3000.
+
+SELECT * FROM EMP
+WHERE SAL >= 3000;
+
+25. WAQTD the details of employees whose salary is less than or equal to 1250.
+
+SELECT * FROM EMP
+WHERE SAL <= 1250;
+
+26. WAQTD the details of employees who are not working in department 10.
+
+SELECT * FROM EMP
+WHERE DEPTNO <> 10;
+
+27. WAQTD the details of employees who are working in department 20 and earning more than 2000.
+
+SELECT * FROM EMP
+WHERE DEPTNO = 20 AND SAL > 2000;
+
+28. WAQTD the name and salary of employees who are working in department 30 and earning more than 1500.
+
+SELECT ENAME, SAL FROM EMP
+WHERE DEPTNO = 30 AND SAL > 1500;
+
+29. WAQTD the details of employees whose job is MANAGER and salary is greater than 2500.
+
+SELECT * FROM EMP
+WHERE JOB = 'MANAGER' AND SAL > 2500;
+
+30. WAQTD the name and salary of employees whose salary is greater than 2000 and less than 4000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL > 2000 AND SAL < 4000;
+
+31. WAQTD the details of employees who are working in department 10 or department 20.
+
+SELECT * FROM EMP
+WHERE DEPTNO = 10 OR DEPTNO = 20;
+
+32. WAQTD the details of employees whose job is CLERK or MANAGER.
+
+SELECT * FROM EMP
+WHERE JOB = 'CLERK' OR JOB = 'MANAGER';
+
+33. WAQTD the name and salary of employees whose salary is 1250 or 3000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL = 1250 OR SAL = 3000;
+
+34. WAQTD the details of employees who are not working in department 30.
+
+SELECT * FROM EMP
+WHERE NOT DEPTNO = 30;
+
+35. WAQTD the details of employees whose job is not SALESMAN.
+
+SELECT * FROM EMP
+WHERE NOT JOB = 'SALESMAN';
+
+36. WAQTD the name and salary of employees whose salary is not 3000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE NOT SAL = 3000;
+
+37. WAQTD the details of employees who are working in department 10, 20 or 30.
+
+SELECT * FROM EMP
+WHERE DEPTNO IN (10, 20, 30);
+
+38. WAQTD the details of employees whose job is CLERK, MANAGER or ANALYST.
+
+SELECT * FROM EMP
+WHERE JOB IN ('CLERK', 'MANAGER', 'ANALYST');
+
+39. WAQTD the name and salary of employees whose salary is 800, 1250 or 3000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL IN (800, 1250, 3000);
+
+40. WAQTD the details of employees who are working in department 10 or 30 using IN.
+
+SELECT * FROM EMP
+WHERE DEPTNO IN (10, 30);
+
+
+
+
+
 
 
 
