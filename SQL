@@ -202,6 +202,67 @@ WHERE SAL IN (800, 1250, 3000);
 SELECT * FROM EMP
 WHERE DEPTNO IN (10, 30);
 
+41. WAQTD the details of employees who are not working in department 10 or 20.
+
+SELECT * FROM EMP
+WHERE DEPTNO NOT IN (10, 20);
+
+42. WAQTD the details of employees whose job is neither CLERK nor MANAGER.
+
+SELECT * FROM EMP
+WHERE JOB NOT IN ('CLERK', 'MANAGER');
+
+43. WAQTD the details of employees whose salary is between 1000 and 3000.
+
+SELECT * FROM EMP
+WHERE SAL BETWEEN 1000 AND 3000;
+
+44. WAQTD the name and salary of employees whose salary is between 2000 and 4000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL BETWEEN 2000 AND 4000;
+
+45. WAQTD the details of employees whose employee number is between 7500 and 7800.
+
+SELECT * FROM EMP
+WHERE EMPNO BETWEEN 7500 AND 7800;
+
+46. WAQTD the details of employees who were hired between 01-JAN-1981 and 31-DEC-1981.
+
+SELECT * FROM EMP
+WHERE HIREDATE BETWEEN '01-JAN-1981' AND '31-DEC-1981';
+
+47. WAQTD the details of employees whose salary is not between 1000 and 3000.
+
+SELECT * FROM EMP
+WHERE SAL NOT BETWEEN 1000 AND 3000;
+
+48. WAQTD the name and salary of employees whose salary is not between 1500 and 3000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL NOT BETWEEN 1500 AND 3000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
