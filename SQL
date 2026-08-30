@@ -242,6 +242,104 @@ WHERE SAL NOT BETWEEN 1000 AND 3000;
 SELECT ENAME, SAL FROM EMP
 WHERE SAL NOT BETWEEN 1500 AND 3000;
 
+49. WAQTD the details of employees whose name starts with S.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE 'S%';
+
+50. WAQTD the details of employees whose name starts with A.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE 'A%';
+
+51. WAQTD the details of employees whose name ends with S.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '%S';
+
+52. WAQTD the details of employees whose name ends with N.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '%N';
+
+53. WAQTD the details of employees whose name contains the letter A.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '%A%';
+
+54. WAQTD the details of employees whose name contains the letter M.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '%M%';
+
+55. WAQTD the details of employees whose name has exactly four characters.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '____';
+
+56. WAQTD the details of employees whose name has exactly five characters.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '_____';
+
+57. WAQTD the details of employees whose name starts with S and has exactly five characters.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE 'S____';
+
+58. WAQTD the details of employees whose second character is A.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '_A%';
+
+59. WAQTD the details of employees whose third character is I.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '__I
+
+60. SELECT * FROM EMP
+WHERE ENAME LIKE 'M%N';
+
+61. WAQTD the details of employees who do not receive commission.
+
+SELECT * FROM EMP
+WHERE COMM IS NULL;
+
+62. WAQTD the names of employees who do not receive commission.
+
+SELECT ENAME FROM EMP
+WHERE COMM IS NULL;
+
+63. WAQTD the details of employees whose manager number is NULL.
+
+SELECT * FROM EMP
+WHERE MGR IS NULL;
+
+64. WAQTD the details of employees who receive commission.
+
+SELECT * FROM EMP
+WHERE COMM IS NOT NULL;
+
+65. WAQTD the names and commission of employees who receive commission.
+
+SELECT ENAME, COMM FROM EMP
+WHERE COMM IS NOT NULL;
+
+66. WAQTD the details of employees who have a manager.
+
+SELECT * FROM EMP
+WHERE MGR IS NOT NULL;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
