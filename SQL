@@ -330,12 +330,126 @@ WHERE COMM IS NOT NULL;
 SELECT * FROM EMP
 WHERE MGR IS NOT NULL;
 
+67.WAQTD the details of employees whose annual salary is greater than 30000.
 
+SELECT * FROM EMP
+WHERE SAL * 12 > 30000;
 
+68. WAQTD the name and salary of employees whose annual salary is less than 20000.
 
+SELECT ENAME, SAL FROM EMP
+WHERE SAL * 12 < 20000;
 
+69. WAQTD the details of employees whose salary after adding 500 is greater than 2500.
 
+SELECT * FROM EMP
+WHERE SAL + 500 > 2500;
 
+70. WAQTD the details of employees whose salary after a 10% increment is greater than 3000.
+
+SELECT * FROM EMP
+WHERE SAL + (SAL * 10 / 100) > 3000;
+
+71. WAQTD the details of employees who are working in department 20 and have a salary between 2000 and 4000.
+
+SELECT * FROM EMP
+WHERE DEPTNO = 20
+AND SAL BETWEEN 2000 AND 4000;
+
+72. WAQTD the name and salary of employees who are working in department 10 or 20 and earning more than 2000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE DEPTNO IN (10, 20)
+AND SAL > 2000;
+
+73. WAQTD the details of employees whose job is CLERK or ANALYST and whose salary is greater than 1000.
+
+SELECT * FROM EMP
+WHERE JOB IN ('CLERK', 'ANALYST')
+AND SAL > 1000;
+
+74. WAQTD the details of employees working in department 20 whose name starts with S.
+
+SELECT * FROM EMP
+WHERE DEPTNO = 20
+AND ENAME LIKE 'S%';
+
+75. WAQTD the details of employees whose salary is between 1000 and 3000 and who receive commission.
+
+SELECT * FROM EMP
+WHERE SAL BETWEEN 1000 AND 3000
+AND COMM IS NOT NULL;
+
+76. WAQTD the details of employees who are working in department 10 or 20 and whose salary is greater than 2000.
+
+SELECT * FROM EMP
+WHERE (DEPTNO = 10 OR DEPTNO = 20)
+AND SAL > 2000;
+
+77. WAQTD the details of employees who are either CLERK or MANAGER and whose salary is greater than 2000.
+
+SELECT * FROM EMP
+WHERE (JOB = 'CLERK' OR JOB = 'MANAGER')
+AND SAL > 2000;
+
+78. WAQTD the details of employees who work in department 10 or 30 and earn between 1000 and 3000.
+
+SELECT * FROM EMP
+WHERE (DEPTNO = 10 OR DEPTNO = 30)
+AND SAL BETWEEN 1000 AND 3000;
+
+79. WAQTD the details of employees who are CLERK or SALESMAN and are not working in department 10.
+
+SELECT * FROM EMP
+WHERE JOB IN ('CLERK', 'SALESMAN')
+AND DEPTNO <> 10;
+
+80. WAQTD the name and salary of employees whose salary is greater than 2000 but less than 4000.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL > 2000
+AND SAL < 4000;
+
+81. WAQTD the details of employees whose name starts with A or S.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE 'A%'
+OR ENAME LIKE 'S%';
+
+82. WAQTD the details of employees whose name contains A and who are working in department 30.
+
+SELECT * FROM EMP
+WHERE ENAME LIKE '%A%'
+AND DEPTNO = 30;
+
+83. WAQTD the details of employees whose job is not CLERK and whose salary is greater than 1500.
+
+SELECT * FROM EMP
+WHERE JOB <> 'CLERK'
+AND SAL > 1500;
+
+84. WAQTD the name, job and salary of employees who are either MANAGER or ANALYST and earn more than 2500.
+
+SELECT ENAME, JOB, SAL FROM EMP
+WHERE JOB IN ('MANAGER', 'ANALYST')
+AND SAL > 2500;
+
+85.WAQTD the details of employees who are working in departments other than 10 and 30.
+
+SELECT * FROM EMP
+WHERE DEPTNO NOT IN (10, 30);
+
+86. WAQTD the details of employees whose salary is not between 1000 and 3000 and whose job is not CLERK.
+
+SELECT * FROM EMP
+WHERE SAL NOT BETWEEN 1000 AND 3000
+AND JOB <> 'CLERK';
+
+87. WAQTD the name and salary of employees who have a salary greater than 2000 or receive commission.
+
+SELECT ENAME, SAL FROM EMP
+WHERE SAL > 2000
+OR COMM IS NOT NULL;
 
 
 
