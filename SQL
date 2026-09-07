@@ -451,7 +451,60 @@ SELECT ENAME, SAL FROM EMP
 WHERE SAL > 2000
 OR COMM IS NOT NULL;
 
+88. WAQTD the total number of employees from the EMP table.
 
+SELECT COUNT(*)
+FROM EMP;
+
+89. WAQTD the total number of employee numbers from the EMP table.
+
+SELECT COUNT(EMPNO)
+FROM EMP;
+
+90. WAQTD the total number of employees who are receiving commission.
+
+SELECT COUNT(COMM)
+FROM EMP;
+
+91. WAQTD the total number of employees who have a manager.
+
+SELECT COUNT(MGR)
+FROM EMP;
+
+92. WAQTD the number of employees whose salary is available.
+
+SELECT COUNT(SAL)
+FROM EMP;
+
+93. WAQTD the number of different jobs available in the EMP table.
+
+SELECT COUNT(DISTINCT JOB)
+FROM EMP;
+
+94. WAQTD the total salary paid to all employees.
+
+SELECT SUM(SAL)
+FROM EMP;
+
+95. WAQTD the total commission paid to all employees.
+
+SELECT SUM(COMM)
+FROM EMP;
+
+96. WAQTD the total annual salary paid to all employees.
+
+SELECT SUM(SAL) * 12
+FROM EMP;
+
+97. WAQTD the total salary of employees working in department 20.
+
+SELECT SUM(SAL) FROM EMP
+WHERE DEPTNO = 20;
+
+98. WAQTD the total salary of employees working as MANAGER.
+
+SELECT SUM(SAL) FROM EMP
+WHERE JOB = 'MANAGER';
 
 
 
