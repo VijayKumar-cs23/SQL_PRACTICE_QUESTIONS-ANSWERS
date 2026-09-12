@@ -506,8 +506,91 @@ WHERE DEPTNO = 20;
 SELECT SUM(SAL) FROM EMP
 WHERE JOB = 'MANAGER';
 
+99. WAQTD the total salary paid to employees in each department.
 
+SELECT DEPTNO, SUM(SAL)
+FROM EMP
+GROUP BY DEPTNO;
 
+100. WAQTD the number of employees working in each department.
+
+SELECT DEPTNO, COUNT(*)
+FROM EMP
+GROUP BY DEPTNO;
+
+101. WAQTD the average salary of employees in each department.
+
+SELECT DEPTNO, AVG(SAL)
+FROM EMP
+GROUP BY DEPTNO;
+
+102. WAQTD the highest salary in each department.
+
+SELECT DEPTNO, MAX(SAL)
+FROM EMP
+GROUP BY DEPTNO;
+
+103. WAQTD the total salary paid for each job.
+
+SELECT JOB, SUM(SAL)
+FROM EMP
+GROUP BY JOB;
+
+104. WAQTD the number of employees working in each job.
+
+SELECT JOB, COUNT(*)
+FROM EMP
+GROUP BY JOB;
+
+105. WAQTD the average salary for each job.
+
+SELECT JOB, AVG(SAL)
+FROM EMP
+GROUP BY JOB;
+
+106. WAQTD the highest salary for each job.
+
+SELECT JOB, MAX(SAL)
+FROM EMP
+GROUP BY JOB;
+
+107. WAQTD the department number, total salary, average salary, highest salary and lowest salary for each department.
+
+SELECT DEPTNO,SUM(SAL),AVG(SAL),MAX(SAL),MIN(SAL)
+FROM EMP
+GROUP BY DEPTNO;
+
+108. WAQTD the job, number of employees, total salary and average salary for each job.
+
+SELECT JOB,COUNT(*),SUM(SAL),AVG(SAL)
+FROM EMP
+GROUP BY JOB;
+
+109. WAQTD the department number, number of employees and total salary for each department.
+
+SELECT DEPTNO,COUNT(*),SUM(SAL)
+FROM EMP
+GROUP BY DEPTNO;
+
+110. WAQTD the department number and average salary with the alias AVERAGE_SALARY.
+
+SELECT DEPTNO,AVG(SAL) AS AVERAGE_SALARY
+FROM EMP
+GROUP BY DEPTNO;
+
+111. WAQTD the job and number of employees with suitable aliases.
+
+SELECT JOB,COUNT(*) AS TOTAL_EMPLOYEES
+FROM EMP
+GROUP BY JOB;
+
+112. WAQTD the department number, highest salary and lowest salary with suitable aliases.
+
+SELECT DEPTNO,MAX(SAL) AS HIGHEST_SALARY,MIN(SAL) AS LOWEST_SALARY
+FROM EMP
+GROUP BY DEPTNO;
+
+113. 
 
 
 
