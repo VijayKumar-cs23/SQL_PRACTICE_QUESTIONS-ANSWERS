@@ -590,7 +590,84 @@ SELECT DEPTNO,MAX(SAL) AS HIGHEST_SALARY,MIN(SAL) AS LOWEST_SALARY
 FROM EMP
 GROUP BY DEPTNO;
 
-113. 
+113. WAQTD the number of employees in each department.
+
+SELECT DEPTNO, COUNT(*) FROM EMP
+GROUP BY DEPTNO;
+
+114. WAQTD the number of employees receiving commission in each department.
+
+SELECT DEPTNO, COUNT(COMM)
+FROM EMP
+GROUP BY DEPTNO;
+
+115. WAQTD the number of employees having a manager in each department.
+
+SELECT DEPTNO, COUNT(MGR)
+FROM EMP
+GROUP BY DEPTNO;
+
+116. WAQTD the number of different jobs in each department.
+
+SELECT DEPTNO, COUNT(DISTINCT JOB)
+FROM EMP
+GROUP BY DEPTNO;
+
+117. WAQTD the number of different salaries in each department.
+
+SELECT DEPTNO, COUNT(DISTINCT SAL)
+FROM EMP
+GROUP BY DEPTNO;
+
+118. WAQTD the total salary paid in each department.
+
+SELECT DEPTNO, SUM(SAL) FROM EMP
+GROUP BY DEPTNO;
+
+119. WAQTD the total commission received by employees in each department.
+
+SELECT DEPTNO, SUM(COMM) FROM EMP
+GROUP BY DEPTNO;
+
+120. WAQTD the total annual salary paid in each department.
+
+SELECT DEPTNO, SUM(SAL * 12)
+FROM EMP
+GROUP BY DEPTNO;
+
+121. WAQTD the total salary of employees in each job.
+
+SELECT JOB, SUM(SAL)
+FROM EMP
+GROUP BY JOB;
+
+122. WAQTD the average salary in each department.
+
+SELECT DEPTNO, AVG(SAL) FROM EMP
+GROUP BY DEPTNO;
+
+123. WAQTD the average commission in each department.
+
+SELECT DEPTNO, AVG(COMM)
+FROM EMP
+GROUP BY DEPTNO;
+
+124.WAQTD the average annual salary in each department.
+
+SELECT DEPTNO, AVG(SAL * 12)
+FROM EMP
+GROUP BY DEPTNO;
+
+125.WAQTD the average salary for each job.
+
+SELECT JOB, AVG(SAL)
+FROM EMP
+GROUP BY JOB;
+
+
+
+
+
 
 
 
