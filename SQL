@@ -664,6 +664,153 @@ SELECT JOB, AVG(SAL)
 FROM EMP
 GROUP BY JOB;
 
+126. WAQTD the total salary in each department for employees earning more than 1500.
+
+SELECT DEPTNO, SUM(SAL)
+FROM EMP
+WHERE SAL > 1500
+GROUP BY DEPTNO;
+
+127. WAQTD the average salary in each department for employees earning more than 2000.
+
+SELECT DEPTNO, AVG(SAL)
+FROM EMP
+WHERE SAL > 2000
+GROUP BY DEPTNO;
+
+128. WAQTD the number of employees in each department whose salary is greater than 1000.
+
+SELECT DEPTNO, COUNT(*)
+FROM EMP
+WHERE SAL > 1000
+GROUP BY DEPTNO;
+
+129. WAQTD the highest salary in each department for employees earning more than 2000.
+
+SELECT DEPTNO, MAX(SAL)
+FROM EMP
+WHERE SAL > 2000
+GROUP BY DEPTNO;
+
+130. WAQTD the lowest salary in each department for employees earning more than 1000
+
+SELECT DEPTNO, MIN(SAL)
+FROM EMP
+WHERE SAL > 1000
+GROUP BY DEPTNO;
+
+131. WAQTD the total salary in each department for departments 10, 20 and 30.
+
+SELECT DEPTNO, SUM(SAL)
+FROM EMP
+WHERE DEPTNO IN (10, 20, 30)
+GROUP BY DEPTNO;
+
+132. WAQTD the average salary for each job where the job is CLERK, MANAGER or SALESMAN.
+
+SELECT JOB, AVG(SAL)
+FROM EMP
+WHERE JOB IN ('CLERK', 'MANAGER', 'SALESMAN')
+GROUP BY JOB;
+
+134. WAQTD the number of employees in departments 20 and 30 for each job.
+
+SELECT JOB, COUNT(*)
+FROM EMP
+WHERE DEPTNO IN (20, 30)
+GROUP BY JOB;
+
+135. WAQTD the total salary in each department for employees whose salary is between 1000 and 3000.
+
+SELECT DEPTNO, SUM(SAL)
+FROM EMP
+WHERE SAL BETWEEN 1000 AND 3000
+GROUP BY DEPTNO;
+
+136. WAQTD the average salary in each department for employees whose salary is between 1500 and 3000.
+
+SELECT DEPTNO, AVG(SAL)
+FROM EMP
+WHERE SAL BETWEEN 1500 AND 3000
+GROUP BY DEPTNO;
+
+137. WAQTD the number of employees in each department whose salary is between 1000 and 2500.
+
+SELECT DEPTNO, COUNT(*)
+FROM EMP
+WHERE SAL BETWEEN 1000 AND 2500
+GROUP BY DEPTNO;
+
+138. WAQTD the number of employees in each department whose name starts with S.
+
+SELECT DEPTNO, COUNT(*)
+FROM EMP
+WHERE ENAME LIKE 'S%'
+GROUP BY DEPTNO;
+
+139. WAQTD the total salary in each department for employees whose name contains A.
+
+SELECT DEPTNO, SUM(SAL)
+FROM EMP
+WHERE ENAME LIKE '%A%'
+GROUP BY DEPTNO;
+
+140. WAQTD the average salary for each job among employees whose name ends with N.
+
+SELECT JOB, AVG(SAL)
+FROM EMP
+WHERE ENAME LIKE '%N'
+GROUP BY JOB;
+
+141. WAQTD the number of employees receiving commission and not receiving commission in each department.
+
+SELECT DEPTNO, COUNT(*)
+FROM EMP
+WHERE COMM IS NULL
+GROUP BY DEPTNO;
+
+142. WAQTD the total commission received in each department by employees who receive commission.
+
+SELECT DEPTNO, SUM(COMM)
+FROM EMP
+WHERE COMM IS NOT NULL
+GROUP BY DEPTNO;
+
+143. WAQTD the average commission in each department for employees receiving commission.
+
+SELECT DEPTNO, AVG(COMM)
+FROM EMP
+WHERE COMM IS NOT NULL
+GROUP BY DEPTNO;
+
+144. WAQTD the department number and total salary of each department, arranged by total salary in ascending order.
+
+SELECT DEPTNO, SUM(SAL) AS TOTAL_SALARY
+FROM EMP
+GROUP BY DEPTNO
+ORDER BY TOTAL_SALARY ASC;
+
+145. WAQTD the department number and total salary of each department, arranged by total salary in descending order.
+
+SELECT DEPTNO, SUM(SAL) AS TOTAL_SALARY
+FROM EMP
+GROUP BY DEPTNO
+ORDER BY TOTAL_SALARY DESC;
+
+146. WAQTD the job and average salary for each job, arranged by average salary in descending order.
+
+SELECT JOB, AVG(SAL) AS AVERAGE_SALARY
+FROM EMP
+GROUP BY JOB
+ORDER BY AVERAGE_SALARY DESC;
+
+147. WAQTD the department number and number of employees in each department, arranged by number of employees in descending order.
+
+SELECT DEPTNO, COUNT(*) AS TOTAL_EMPLOYEES
+FROM EMP
+GROUP BY DEPTNO
+ORDER BY TOTAL_EMPLOYEES DESC;
+
 
 
 
