@@ -811,6 +811,54 @@ FROM EMP
 GROUP BY DEPTNO
 ORDER BY TOTAL_EMPLOYEES DESC;
 
+148. WAQTD the department number having more than one employee.
+
+SELECT DEPTNO
+FROM EMP
+GROUP BY DEPTNO
+HAVING COUNT(*) > 1;
+
+149. WAQTD the departments where the total salary is greater than 9000.
+
+SELECT DEPTNO, SUM(SAL) AS TOTAL_SALARY
+FROM EMP
+GROUP BY DEPTNO
+HAVING SUM(SAL) > 9000;
+
+150. WAQTD the departments where the average salary is greater than 2000.
+
+SELECT DEPTNO, AVG(SAL) AS AVERAGE_SALARY
+FROM EMP
+GROUP BY DEPTNO
+HAVING AVG(SAL) > 2000;
+
+151. WAQTD the jobs having more than two employees.
+
+SELECT JOB, COUNT(*) AS TOTAL_EMPLOYEES
+FROM EMP
+GROUP BY JOB
+HAVING COUNT(*) > 2;
+
+152. WAQTD the jobs where the total salary is greater than 5000.
+
+SELECT JOB, SUM(SAL) AS TOTAL_SALARY
+FROM EMP
+GROUP BY JOB
+HAVING SUM(SAL) > 5000;
+
+153. WAQTD the departments where the highest salary is greater than 3000.
+
+SELECT DEPTNO, MAX(SAL) AS HIGHEST_SALARY
+FROM EMP
+GROUP BY DEPTNO
+HAVING MAX(SAL) > 3000;
+
+154. WAQTD the departments where the lowest salary is greater than 1000.
+
+SELECT DEPTNO, MIN(SAL) AS LOWEST_SALARY
+FROM EMP
+GROUP BY DEPTNO
+HAVING MIN(SAL) > 1000;
 
 
 
